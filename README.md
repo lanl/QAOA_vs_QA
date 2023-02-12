@@ -7,6 +7,8 @@ This repository contains the code and data associated with the paper [Quantum An
 - `generate_IBMdevice_partition.py` contains additional functions used for generating a QAOA circuit. 
 - `create_medium_instance_ibm_washington_parallel.py` generates the tiled parallel quantum annealing embeddings for the problem instances with cubic terms. The problem instanes with those cubic terms removed can also be embedded using these computed embeddings. 
    - `parallel_embeddings/` contains the tiled embeddings for a logical Pegasus P_16 QA hardware graph. 
+- `figures/` contains QA embedding figures
+- `QAOA_2_round_DD_volumetric_plots/` and `QAOA_2_round_volumetric_plots` contains 2-round QAOA 3-d volumetric isomorphic surface heatmap plots, which show the searched parameter space of the QAOA angles. Each plot comes as both a pdf and an html which helps for 3d viewing. The filename format is `problem_idx_beta`. `problem` is either cubic or quadratic. `idx` is the 0-9 problem index. `beta` is the beta angle 0-4 index (each 2-round QAOA search space is represented by 5 of these 3d plots). 
 
 
 ## How to Cite?
