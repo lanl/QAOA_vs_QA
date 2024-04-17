@@ -1,5 +1,6 @@
 # QAOA_vs_QA
 This repository contains the code and data associated with the paper [Quantum Annealing vs. QAOA: 127 Qubit Higher-Order Ising Problems on NISQ Computers](https://arxiv.org/abs/2301.00520)
+Along with the extended paper [Short-Depth QAOA Circuits and Quantum Annealing on Higher-Order Ising Models](https://www.nature.com/articles/s41534-024-00825-w)
 
 - `generate_QAOA_circuit.py` This python script contains the code methods which generate the QAOA circuits using Qiskit. This script can generate a QAOA circuit for cubic or quadratic problem instances. 
 - `generate_problem_instance.py` can generate these problem instances, defined in the heavy hex graph of an IBMQ device. 
@@ -14,12 +15,25 @@ This repository contains the code and data associated with the paper [Quantum An
 ## How to Cite?
 bibtex:
 ```latex
-@misc{QAOA_vs_QA_127,
-  doi = {10.48550/ARXIV.2301.00520},
-  url = {https://arxiv.org/abs/2301.00520},
-  author = {Pelofske, Elijah and Bärtschi, Andreas and Eidenbenz, Stephan},
-  title = {Quantum Annealing vs. QAOA: 127 Qubit Higher-Order Ising Problems on NISQ Computers},
-  year = {2023},
+@article{QA_vs_QAOA_127,
+  author        = {Pelofske, Elijah and B{\"{a}}rtschi, Andreas and Eidenbenz, Stephan},
+  booktitle     = {International Conference on High Performance Computing ISC HPC'23},
+  title         = {{Quantum Annealing vs. QAOA: 127 Qubit Higher-Order Ising Problems on NISQ Computers}},
+  year          = {2023},
+  month         = may,
+  pages         = {240--258},
+  archiveprefix = {arXiv},
+  doi           = {10.1007/978-3-031-32041-5_13},
+  eprint        = {2301.00520},
+}
+
+@article{Short_Depth_QAOA_QA,
+  author   = {Pelofske, Elijah and B{\"{a}}rtschi, Andreas and Eidenbenz, Stephan},
+  journal  = {npj Quantum Information},
+  title    = {{Short-Depth QAOA Circuits and Quantum Annealing on Higher-Order Ising Models}},
+  year     = {2024},
+  month    = march,
+  doi      = {10.1038/s41534-024-00825-w},
 }
 ```
 
