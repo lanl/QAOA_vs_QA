@@ -11,9 +11,16 @@ Along with the extended paper [Short-Depth QAOA Circuits and Quantum Annealing o
 - `figures/` contains QA embedding figures
 - `QAOA_2_round_DD_volumetric_plots/` and `QAOA_2_round_volumetric_plots` contains 2-round QAOA 3-d volumetric isomorphic surface heatmap plots, which show the searched parameter space of the QAOA angles. Each plot comes as both a pdf and an html which helps for 3d viewing. The filename format is `problem_idx_beta`. `problem` is either cubic or quadratic. `idx` is the 0-9 problem index. `beta` is the beta angle 0-4 index (each 2-round QAOA search space is represented by 5 of these 3d plots). 
 
+# Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs
+The class of Ising models that contain geometrically local cubic terms and are defined on heavy-hex graphs was then used in a subsequent study titled 
+[Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs](https://arxiv.org/abs/2312.00997)
+
+This study used several additional hardware graph defined Ising models on 16, 27, 127, and 414 qubit heavy hex graphs. 
+- `additional_heavy_hex_higher_order_Ising_models/` contains the Ising models used in this study. Note that the study also does report results from `ibm_washington` hardware graph defined Ising models (run on `ibm_washington`). 
+
 
 ## How to Cite?
-bibtex:
+QAOA vs. QA studies bibtex:
 ```latex
 @article{QA_vs_QAOA_127,
   author        = {Pelofske, Elijah and B{\"{a}}rtschi, Andreas and Eidenbenz, Stephan},
@@ -34,6 +41,18 @@ bibtex:
   year     = {2024},
   month    = march,
   doi      = {10.1038/s41534-024-00825-w},
+}
+```
+
+Scaling QAOA study bibtex entry:
+```
+@article{QAOA_heavy_hex_scaling,
+      title={{Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs}}, 
+      author={Elijah Pelofske and Andreas Bärtschi and Lukasz Cincio and John Golden and Stephan Eidenbenz},
+      year={2023},
+      eprint={2312.00997},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph}
 }
 ```
 
