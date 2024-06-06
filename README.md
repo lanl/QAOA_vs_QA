@@ -27,12 +27,12 @@ we only need one set of these embeddings. For the cubic terms, because of the or
 - Run `execute_quadratic_instance_quantum_annealing.py` to sample one of the quadratic problem instances. Run `execute_cubic_instance_quantum_annealing.py` to sample one of the problem instances with cubic terms. Note that these scripts are using just a single set of QA parameters, and for a single problem instance -- mostly to show an example of how to construct the Ising models. 
 
 
-# Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs
+### Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs
 The class of Ising models that contain geometrically local cubic terms and are defined on heavy-hex graphs was then used in a subsequent study titled 
 [Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs](https://arxiv.org/abs/2312.00997)
 
 This study used several additional hardware graph defined Ising models on 16, 27, 127, and 414 qubit heavy hex graphs. 
-- `additional_heavy_hex_higher_order_Ising_models/` contains the Ising models used in this study. Note that the study also does report results from `ibm_washington` hardware graph defined Ising models (run on `ibm_washington`). 
+- `problem_instances/` also contains the Ising models used in this study. Note that the study also does report results from `ibm_washington` hardware graph defined Ising models (run on `ibm_washington`). 
 
 
 ## How to Cite?
