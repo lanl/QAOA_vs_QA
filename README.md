@@ -27,6 +27,7 @@ The script `create_horizontal_heavy_hex_Pegasus_embeddings.py` is required to ru
 
 - Run `execute_quadratic_instance_quantum_annealing.py` to sample one of the quadratic problem instances. 
 Run `execute_cubic_instance_quantum_annealing.py` to sample one of the problem instances with cubic terms. 
+Note that these scripts are using just a single set of QA parameters, and for a single problem instance -- mostly to show an example of how to construct the Ising models. 
 
 
 # Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs
