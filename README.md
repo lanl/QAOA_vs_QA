@@ -10,6 +10,9 @@ Along with the extended paper [Short-Depth QAOA Circuits and Quantum Annealing o
    - `parallel_embeddings/` contains the tiled embeddings for a logical Pegasus P_16 QA hardware graph. 
 - `figures/` contains QA embedding figures
 - `QAOA_2_round_DD_volumetric_plots/` and `QAOA_2_round_volumetric_plots` contains 2-round QAOA 3-d volumetric isomorphic surface heatmap plots, which show the searched parameter space of the QAOA angles. Each plot comes as both a pdf and an html which helps for 3d viewing. The filename format is `problem_idx_beta`. `problem` is either cubic or quadratic. `idx` is the 0-9 problem index. `beta` is the beta angle 0-4 index (each 2-round QAOA search space is represented by 5 of these 3d plots). 
+- `execute_quadratic_instance_quantum_annealing.py` uses a set of fixed Pegasus embeddings, defined in `parallel_embeddings/`, in order to embed and run one of the heavy-hex Ising models on aa D-Wave quantum annealer. 
+Note that this code is an example where a single set of anneal parameters are used, and the results are written to a single JSON file. 
+
 
 # Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs
 The class of Ising models that contain geometrically local cubic terms and are defined on heavy-hex graphs was then used in a subsequent study titled 
