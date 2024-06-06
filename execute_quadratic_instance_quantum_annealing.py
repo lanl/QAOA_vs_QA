@@ -52,7 +52,7 @@ end = ((AT-duration)/2.0)+duration
 anneal_schedule = [[0, 0], [start, s], [end, s], [AT, 1]]
 params = {"num_reads": 1000, "anneal_schedule": anneal_schedule}
 IBMQ_device = "ibm_washington"
-file = open("fixed_problems/"+IBMQ_device+"_"+str(heavy_hex_rep_idx)+".txt", "r")
+file = open("problem_instances/"+IBMQ_device+"_"+str(heavy_hex_rep_idx)+".txt", "r")
 instance = ast.literal_eval(file.read())
 file.close()
 
