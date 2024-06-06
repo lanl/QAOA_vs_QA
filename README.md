@@ -14,6 +14,21 @@ Along with the extended paper [Short-Depth QAOA Circuits and Quantum Annealing o
 Note that this code is an example where a single set of anneal parameters are used, and the results are written to a single JSON file. 
 
 
+### Workflow
+
+The general workflow to generate and run a problem on a D-Wave quantum annealer is as follows. 
+- Run `generate_problem_instance.py` on the specific heavy-hex hardware you may wish to define new problem instances on. In this case, we have many instances stored in `problem_instances/` and `additional_heavy_hex_higher_order_Ising_models/`.
+
+- Run `create_cubic_instance_ibm_washington_parallel.py` for one of the problem instances with cubic terms.  
+This code creates parallel embeddings of the problem insance, on a logical Pegasus graph. This code then saves that data as a text file, such as `parallel_embeddings/medium_1.txt`. 
+The code `create_quadratic_instance_ibm_washington_parallel.py` does the same thing, but for the problem instances with no cubic terms. Importantly, for the quadratic problem instances, 
+we only need one set of these embeddings. For the cubic terms, because of the order reduction, we need a different embedding for each problem instance. 
+The script `create_horizontal_heavy_hex_Pegasus_embeddings.py` is required to run either of these embedding scripts, but the output from that is already saved in `horizontal_line_embeddings`, so unless you are running this on a new D-Wave device, this step is not required. 
+
+- Run `execute_quadratic_instance_quantum_annealing.py` to sample one of the quadratic problem instances. 
+Run `execute_cubic_instance_quantum_annealing.py` to sample one of the problem instances with cubic terms. 
+
+
 # Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs
 The class of Ising models that contain geometrically local cubic terms and are defined on heavy-hex graphs was then used in a subsequent study titled 
 [Scaling Whole-Chip QAOA for Higher-Order Ising Spin Glass Models on Heavy-Hex Graphs](https://arxiv.org/abs/2312.00997)
